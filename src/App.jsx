@@ -1,6 +1,8 @@
 import { useState } from "react";
 import Counter from "./components/counter";
 import ImageSlider from "./components/imageSlider";
+import Lists from "./components/lists";
+import Conditional from "./components/conditional";
 // const a = [1,2]
 // const [b,c] = a
 
@@ -20,6 +22,10 @@ export default function App() {
       <button onClick={incrementThisCounter}>Click Here</button>
 
       <ImageSlider />
+
+      <Conditional/>
+
+      <Lists/>
     </>
   );
 }
