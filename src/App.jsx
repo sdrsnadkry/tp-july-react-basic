@@ -3,6 +3,7 @@ import Counter from "./components/counter";
 import ImageSlider from "./components/imageSlider";
 import Lists from "./components/lists";
 import Conditional from "./components/conditional";
+import Form from "./components/form";
 // const a = [1,2]
 // const [b,c] = a
 
@@ -15,8 +16,10 @@ export default function App() {
 
   return (
     <>
-      <h1>Hello {counter}</h1>
+      <Form />
+      {/* <h1>Hello {counter}</h1> */}
 
+      {/* 
       <Counter counter={counter} />
 
       <button onClick={incrementThisCounter}>Click Here</button>
@@ -25,7 +28,7 @@ export default function App() {
 
       <Conditional/>
 
-      <Lists/>
+      <Lists/> */}
     </>
   );
 }
