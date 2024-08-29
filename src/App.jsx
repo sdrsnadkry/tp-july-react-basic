@@ -4,6 +4,7 @@ import ImageSlider from "./components/imageSlider";
 import Lists from "./components/lists";
 import Conditional from "./components/conditional";
 import Form from "./components/form";
+import FormWithValidation from "./components/formWithValidation";
 // const a = [1,2]
 // const [b,c] = a
 
@@ -16,7 +17,8 @@ export default function App() {
 
   return (
     <>
-      <Form />
+      <FormWithValidation />
+      {/* <Form /> */}
       {/* <h1>Hello {counter}</h1> */}
 
       {/* 
