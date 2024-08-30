@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 const images = [
   "https://images.pexels.com/photos/15574290/pexels-photo-15574290/free-photo-of-magical-equipment-on-table.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1",
@@ -9,6 +10,8 @@ const images = [
 ];
 
 const ImageSlider = () => {
+  const navigate = useNavigate();
+
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
 
   const handleNext = () => {
@@ -40,8 +43,13 @@ const ImageSlider = () => {
 
   const styles = { marginTop: 40, height: 400, width: 400, overflow: "hidden" };
 
+  const handleNavigateToHome = () => {
+    navigate("/city");
+  };
+
   return (
     <>
+      <button onClick={handleNavigateToHome}>Move to city pick</button>
       <div style={styles}>
         <img
           src={images[currentImageIndex]}

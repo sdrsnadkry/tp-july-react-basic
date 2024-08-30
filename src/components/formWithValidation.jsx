@@ -1,9 +1,10 @@
-import React, { useState } from "react";
+import React from "react";
 
 import { useFormik } from "formik";
 
 import { object, string } from "yup";
 import { countryCode } from "../data/countryCode";
+import { Link } from "react-router-dom";
 
 const userSchema = object({
   name: string().required("Please enter name"),
@@ -37,6 +38,9 @@ const FormWithValidation = () => {
   return (
     <div>
       <h1>Contact Form</h1>
+
+      <Link to={"/random-slider"} >Move to slider Slider</Link>
+
 
       <form
         onSubmit={(event) => {

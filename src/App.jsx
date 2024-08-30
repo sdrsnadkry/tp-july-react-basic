@@ -1,36 +1,22 @@
-import { useState } from "react";
-import Counter from "./components/counter";
-import ImageSlider from "./components/imageSlider";
-import Lists from "./components/lists";
-import Conditional from "./components/conditional";
-import Form from "./components/form";
+import React from "react";
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import FormWithValidation from "./components/formWithValidation";
-// const a = [1,2]
-// const [b,c] = a
+import ImageSlider from "./components/imageSlider";
+import ErrorPage from "./components/ErrorPage";
+import Conditional from "./components/conditional";
 
-export default function App() {
-  //state
-  const [counter, setCounter] = useState(1);
-  const incrementThisCounter = () => {
-    setCounter(counter + 10);
-  };
-
+const App = () => {
   return (
-    <>
-      <FormWithValidation />
-      {/* <Form /> */}
-      {/* <h1>Hello {counter}</h1> */}
-
-      {/* 
-      <Counter counter={counter} />
-
-      <button onClick={incrementThisCounter}>Click Here</button>
-
-      <ImageSlider />
-
-      <Conditional/>
-
-      <Lists/> */}
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<FormWithValidation />} />
+        <Route path="/random-slider" element={<ImageSlider />} />
+        <Route path="/city" element={<Conditional />} />
+        <Route path="*" element={<ErrorPage />} />
+      </Routes>
+    </BrowserRouter>
   );
-}
+};
+
+export default App;
