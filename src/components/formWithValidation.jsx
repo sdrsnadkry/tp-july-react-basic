@@ -33,14 +33,16 @@ const FormWithValidation = () => {
     },
   });
 
-  console.log(formik);
-
   return (
     <div>
       <h1>Contact Form</h1>
 
-      <Link to={"/random-slider"} >Move to slider Slider</Link>
-
+      <Link to={"/slider"}>Redirect</Link>
+      <Link to={"/slider"}>Redirect</Link>
+      <Link to={"/slider"}>Redirect</Link>
+      <Link to={"/slider"}>Redirect</Link>
+      <Link to={"/slider"}>Redirect</Link>
+      <Link to={"/slider"}>Redirect</Link>
 
       <form
         onSubmit={(event) => {
